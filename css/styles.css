@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    width: 300px;
+    overflow: auto;
+}
+
+.cookie-header {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.cookie-details {
+    font-size: 12px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    word-break: break-all;
+}
+
+.cookie-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cookie-details th,
+.cookie-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.cookie-details th {
+    background-color: #f2f2f2;
+}
