@@ -9,17 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fetch all cookies for the current tab
         chrome.cookies.getAll({domain: url.hostname}, function(cookies) {
             cookies.forEach(function(cookie) {
-                // Create a container for each cookie
                 const cookieDiv = document.createElement('div');
-                cookieDiv.classList.add('cookie-container');
+                cookieDiv.classList.add('cookie-details');
 
-                // Add cookie name as header
                 const cookieHeader = document.createElement('div');
                 cookieHeader.classList.add('cookie-header');
                 cookieHeader.textContent = `Cookie: ${cookie.name}`;
                 cookieDiv.appendChild(cookieHeader);
 
-                // Create a table for each cookie
                 const table = document.createElement('table');
                 const tableHeader = table.createTHead();
                 const headerRow = tableHeader.insertRow();

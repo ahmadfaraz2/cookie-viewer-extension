@@ -2,11 +2,15 @@
     "manifest_version": 3,
     "name": "Cookie Viewer",
     "description": "View and analyze cookies with detailed attributes in the side panel",
-    "version": "2.0",
+    "version": "3.0",
     "permissions": [
         "cookies",
         "activeTab",
         "storage"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
     ],
     "action": {
         "default_icon": {
@@ -15,10 +19,6 @@
             "128": "icon128.png"
         }
     },
-    "host_permissions": [
-        "http://*/*",
-        "https://*/*"
-    ],
     "side_panel": {
         "default_path": "sidepanel.html"
     }
