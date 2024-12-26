@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const cookieContainer = document.getElementById('cookieContainer');
 
     // Get the current active tab URL
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         const activeTab = tabs[0];
         const url = new URL(activeTab.url);
 
         // Fetch all cookies for the current tab
-        chrome.cookies.getAll({domain: url.hostname}, function(cookies) {
-            cookies.forEach(function(cookie) {
+        chrome.cookies.getAll({ domain: url.hostname }, function (cookies) {
+            cookies.forEach(function (cookie) {
                 const cookieDiv = document.createElement('div');
                 cookieDiv.classList.add('cookie-details');
 
